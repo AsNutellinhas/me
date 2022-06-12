@@ -1,0 +1,156 @@
+
+<html>
+<head>
+
+	<title>WhatsApp Message Form</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="author" content="Harish Rohilla">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="css/formStyle.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="js/appform.js"></script>
+	<script src="js/jquery.validate.min.js"></script>
+
+	<style>
+	body {
+		font-family: sans-serif;
+		margin: 0 auto;
+		box-sizing: border-box;
+		color: #2f2f2f;
+		background-color: #fdfdfc;
+	}
+	</style>
+
+</head>
+<body>
+
+	<div align="center">
+		<h2 style="color: #25b923;font-size: 22px;margin-top: 25px;">
+			<i class="fa fa-whatsapp" style="font-size:22px;padding:5px;"></i>WhatsApp</h2>
+		</div>
+
+		<div class="whatsappForm">
+
+			<form id="whatsAppAnyForm" class="whatsappFormCls" action="" method="POST" data-title="*Direct*" novalidate>
+				<div id="whatsappFormResponse"></div>
+				<div class="whatsappFormRow">
+					<div class="label">Nome <span>*</span></div>
+					<input type="text" id="name" name="name" class="whatsappForm-input" placeholder="Nome" required>
+				</div>
+
+				<div class="whatsappFormRow">
+					<div class="label">
+						Email <span>*</span> 
+					</div>
+					<input type="text" id="useremail" name="useremail" class="whatsappForm-input" placeholder="Email" required>
+				</div>
+
+				<!--<div class="whatsappFormRow">
+					<div class="label">Phone</div>
+					<input type="text" id="phonenumber" name="phonenumber" class="whatsappForm-input" placeholder="Phone Number" required>
+				</div>-->
+
+				<!--<div class="whatsappFormRow">
+					<div class="label">Choose Service <span>(Obrigatório)</span></div>
+					<select id="service" name="service" class="whatsappForm-input" placeholder="Service" required>
+						<option value="Web Development">Web Development</option>
+						<option value="Design">Design</option>
+						<option value="Online Marketting">Online Marketting</option>
+					</select>
+				</div>
+
+				<div class="whatsappFormRow">
+					<div class="label">Gender <span>*</span></div>
+					<div class="row-value">
+						<div class="radioselection">
+							<span class="radio">
+								<span class="radiolabel">Male</span>
+								<input type="radio" id="gender" name="gender" value="Male" class="whatsappForm-select" placeholder="Gender" required />
+							</span>
+							<span class="radio">
+								<span class="radiolabel">Female</span>
+								<input type="radio" id="gender" name="gender" value="Female" class="whatsappForm-select" placeholder="Gender" required />
+							</span>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="whatsappFormRow">
+					<div class="label">Residência <span>*</span></div>
+					<div class="row-value">
+						<div class="radioselection">
+							<span class="radio">
+								<span class="radiolabel">Casa</span>
+								<input type="radio" id="resid" name="resid" value="Casa" class="whatsappForm-select" placeholder="resid" required />
+								
+							</span>
+							<span class="radio">
+								<span class="radiolabel">Apartamento</span>
+								<input type="radio" id="resid" name="resid" value="Apartamento" class="whatsappForm-select" placeholder="resid" required />
+								
+							</span>
+						</div>
+					</div>
+
+				</div>-->
+
+
+				<div class="whatsappFormRow">
+					<div class="label">Como Ficou Sabendo?</div>
+
+					<div class="row-value">
+						<div class="checkboxes">
+							<span class="checkbox">
+								<span class="checkbox-label">Redes Sociais</span>
+								<input type="checkbox" name="checkbox_options" id="checkbox_options" class="whatsappForm-select" value="Redes Sociais" placeholder="Como Ficou Sabendo?" />
+
+							</span>
+
+							<span class="checkbox">
+								<span class="checkbox-label">Um Amigo</span>
+								<input type="checkbox" name="checkbox_options" id="checkbox_options" class="whatsappForm-select" value="Um Amigo" placeholder="Como Ficou Sabendo?" />
+
+							</span>
+
+
+							<span class="checkbox">
+								<span class="checkbox-label">Outros</span>
+								<input type="checkbox" name="checkbox_options" id="checkbox_options" class="whatsappForm-select" value="Outros" placeholder="Como Ficou Sabendo?" />
+
+							</span>
+
+
+						</div>
+					</div>		
+				</div>
+
+				<div class="whatsappFormRow">
+					<div class="label">Menssagem</div>
+					<textarea id="message" rows="3" name="message" class="whatsappForm-textarea" >
+					</textarea>
+				</div>
+
+				<div class="whatsappFormRow">
+					<button type="Submit" id="whatsappFormSubmit"><i class="fa fa-whatsapp" style="font-size:20px;padding:5px;"></i>Enviar via WhatsApp</button>
+
+
+				</div>
+
+			</form>
+		</div>  
+	</body>
+
+	<script>
+	(function($){
+		"use strict";
+		$('#whatsAppAnyForm').appPlugin( 
+		{
+					whatsappPhone: '+5511942747540', // Your Whatsapp Number, on which you want to send message.
+					submissionMessage: 'Você será redirecionado para o Whatsapp. Obrigado!' // form submission message
+				});	
+	})(jQuery);
+	</script>
+
+	</html>

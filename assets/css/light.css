@@ -1,0 +1,8 @@
+body {
+  background: linear-gradient(90deg, var(--white) 50%, var(--white));
+}
+
+h1, h2, p {
+  color: #363636;
+}
+

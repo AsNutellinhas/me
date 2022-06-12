@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>As Nutellinhas - Todas as Mídias</title>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="As Nutellinhas" name="As Nutellinhas">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#E50000">
+  
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="As Nutellinhas - Todas as Mídias">
+  <meta name="description" content="Todas as Nossas Mídias...">
+  <meta property="image" itemprop="image" content="assets/img/favicon.png"/>
+  <meta name="keywords" content="As Nutellinhas, Facebook, YouTube, TikTok, Instagram, Loja Virtual"/>
+  <meta itemprop="thumbnailUrl" content="assets/img/favicon.png" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+  <meta property="og:title" content="As Nutellinhas - Todas as Mídias">
+  <meta property="og:description" content="Todas as Nossas Mídias...">
+  <meta property="og:image" itemprop="image" content="assets/img/favicon.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="">
+  <meta property="twitter:title" content="As Nutellinhas - Todas as Mídias">
+  <meta property="twitter:description" content="Todas as Nossas Mídias...">
+  <meta property="twitter:image" content="assets/img/favicon.png">
+
+
+  <!-- Código do Schema.org também para o Google+ -->
+  <meta itemprop="name" content="As Nutellinhas">
+  <meta itemprop="description" content="As Nutellinhas - Todas as Mídias">
+
+
+  <!-- STYLE -->
+  <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+  <link id="active-stylesheet" href="" rel="stylesheet" type="text/css"/>
+  <link rel="stylesheet" href="assets/css/sweetalert2.css">
+  <link href="assets/css/bootstrap/bootstrap-4-latest.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/jlplayer-master/video/jlplayer.css">
+  <link href="assets/img/favicon.png" type="image/x-icon" rel="icon"/>
+  <link href="assets/img/favicon.png" type="image/x-icon" rel="shortcut icon"/>
+  <link rel="manifest" href="manifest.webmanifest">
+  <!--<link rel="manifest" href="manifest.json">-->
+
+  <!-- FAVICON -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/favicon.png" rel="apple-touch-icon">
+
+  <!-- FONTES -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/fontawesome/css/all.css">
+  <link rel="stylesheet" href="assets/css/fontawesome/css/brands.css">
+  <link rel="stylesheet" href="assets/css/fontawesome/css/regular.css">
+  <link rel="stylesheet" href="assets/css/fontawesome/css/solid.css">
+  <link rel="stylesheet" href="assets/css/fontawesome/css/fontawesome.css">
+
+
+</head>
+
+<body>
+  <!--<div id="loading" class="loading">
+    <img id="loading-image" src="assets/img/loading.gif" alt="Carregando..." />
+  </div>-->
+
+  <div class='navbar no-items section' id='navbar'>
+    <div class="switch-buttons">
+      <div class='container d-flex justify-content-center p-0'>
+        <button type="button" class="btn btn-primary mx-auto b-share" data-toggle="modal" data-target="#ShareModal" title="Compartilhar!">
+          <i class="fas fa-share"></i>
+        </button>
+      </div> 
+    </div>
+
+  </div>
+
+
+  <!-- Share modal -->
+  <div class="modal fade" id="ShareModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content col-12">
+      <div class="modal-header">
+        <h5 class="modal-title">Compartilhar nas mídias</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="icon-container2 d-flex">
+          <div class="smd" onclick="da_share.fb();">
+            <i class="img-thumbnail fab fa-facebook fa-1x"
+            style="color: #3b5998;"></i>
+            <p>Facebook</p>
+          </div>
+          <div class="smd" onclick="da_share.tw();">
+            <i class=" img-thumbnail fab fa-twitter fa-1x"
+            style="color:#4c6ef5;"></i>
+            <p>Twitter</p>
+          </div>
+          <div class="smd" onclick="da_share.wp();">
+            <i class="img-thumbnail fab fa-whatsapp fa-1x"
+            style="color: #25D366;"></i>
+            <p>Whatsapp</p>
+          </div>
+          <div class="smd" onclick="da_share.tg();">
+            <i class="img-thumbnail fab fa-telegram fa-1x"
+            style="color: #4c6ef5;"></i>
+            <p>Telegram</p>
+          </div>
+        </div>
+      </div>
+      
+      <label class="m-auto"  style="font-weight: 600">Copiar Link <span class="message"></span></label>
+      <div class="row mx-auto mb-4 mt-1">
+        <input class="col-10 ur" type="url" placeholder="" id="myInput" aria-describedby="inputGroup-sizing-default" style="height: 44px;" value="" disabled>
+        <button class="cpy" onclick="myFunction()"><i class="far fa-clone"></i></button>
+      </div>
+
+      <div class="row mx-auto mb-4 mt-1">
+        <label class="my-auto mr-2" style="font-weight: 600">Modo de exibição</label>
+        <button class="switch-buttons__light button" data-stylesheet="assets/css/light.css"><i aria-hidden='true' class="fa-solid fa-sun"></i></button>
+        <button class="switch-buttons__dark button" data-stylesheet="assets/css/dark.css"><i aria-hidden='true' class="fa-solid fa-moon"></i></button>
+      </div>
+
+      <div class="modal-footer">
+       <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+     </div>
+   </div>
+ </div>
+</div>
+<!-- Share modal -->
+
+<!-- Button video modal -->
+<div class="image-profile"><a type="button" data-toggle="modal" data-target="#VideoModal1"><img alt='User Photo' id='userPhoto' src='assets/img/profile.png' title="Clique para ver o vídeo!"/></a></div>
+<!-- Button video modal -->
+
+<!-- video modal -->
+<div class="modal fade" id="VideoModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Video de apresentação</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <!-- MODAL VIDEO -->
+      <div class="modal-body">
+       <form class="video-container" action="" method="GET">
+        <!-- Chamar elemento vídeo com class jlplayer-video-->
+        <video preload="none" class="jlplayer-video video-js vjs-default-skin" poster="assets/img/profile.png">
+          <source src="https://assets.mixkit.co/videos/preview/mixkit-girls-playing-with-dog-in-the-park-25007-large.mp4#t=0.5" type="video/mp4">
+            <track default
+            kind="captions"
+            label="portuguese"
+            srclang="pt-br"
+            src="assets/jlplayer-master/video/legenda.vtt" />
+            Sorry, your browser doesn't support embedded videos.
+          </video>
+
+          <!-- YouTube 16:9 aspect ratio
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/O7waiBlrJA8?autoplay=1" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
+          </div>
+          YouTube 16:9 aspect ratio -->
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- video modal -->
+
+<!-- < USERNAME > -->
+<spam class='userName'><h1>@AsNutellinhas<a data-toggle="tooltip" data-placement="top" title="Verificado"><i class="iconify fms-vrf" data-icon="bx-bxs-badge-check" data-inline="false"></i></a></h1></spam>
+<!-- < USERNAME > -->
+
+<!-- < Description > 
+<div class="description"><h2 class="legenda">Todas as nossas mídias</h2></div>-->
+ 
+<div id="accordion">
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          O melhor conteúdo da internet.
+        </button>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+      <div class="card-body">
+        As Nutellinhas, é um canal de entretenimento em geral, dedicado exclusivamente para os que gostam de diversão.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--< Description > -->
+
+
+
+<!-- < MENU DE LINKS >  -->
+<div id='links'>
+  <a class='link hidden' href='#'><i aria-hidden='true' class='fas fa-bag-shopping animation'></i> Loja Virtual <span class="new">Novo</span></a>
+  <a class='link' href='#' target='_blank'><i aria-hidden='true' class='fab fa-youtube animation'></i> YouTube</a>
+  <a class='link' href='#' target='_blank'><i class="fa-brands fa-tiktok shake"></i> TikTok</a>
+  <a class='link ' href='#' target='_blank'><i aria-hidden='true' class='fab fa-instagram animation'></i> Instagram</a>
+  </a>
+  <a class='link hidden' href='https://t.me/#' target='_blank'><i aria-hidden='true' class='fab fa-telegram-plane animation'></i> Telegram <span class="new">Novo</span></a>
+  <a class='link ' href='#' target='_blank'><i aria-hidden='true' class="fas fa-map-marker-alt animation"></i> Endereço </a>
+  
+</div>
+<!--< MENU DE LINKS > -->
+
+<!-- < Footer > -->
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="text-center footer">
+        <a href="#" target='_blank'>Powered by <b>As Nutellinhas</b></a>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <button id="clear-storage">Limpar cache</button>
+    </div>
+  </div>
+</div>
+<!-- < Footer > -->
+
+
+<button type="button" class="btn btn-primary chat" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"><i aria-hidden='true' class='fab fa-whatsapp'></i></button>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+
+        <h5 class="modal-title" id="exampleModalLabel">Contato via <span class="fab fa-whatsapp"></span> WhatsApp</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-2">
+        <p class="paragraph-text m-1">Preencha os campos para enviar mensagem no WhatsApp.</p>
+        <form class="whatsapp-form">
+          <div class="whatsappFormRow">
+            <div class="label">Nome <span>*</span></div>
+            <input type="text" id="wa_name" name="name" class="form-control" placeholder="Nome" required="">
+          </div>
+
+                  <!--<div class="whatsappFormRow">
+                    <div class="label">Sobrenome <span>*</span></div>
+                    <input type="text" id="wa_surname" name="name" class="form-control" placeholder="Sobrenome" required="">
+                  </div>-->
+
+
+                  <div class="whatsappFormRow">
+                    <div class="label">E-mail <span>*</span></div>
+                    <input class="form-control" id="wa_email" name="email" required="" type="email" value='' placeholder="E-mail" />
+                    <span class="highlight"></span><span class="bar"></span>
+                  </div>
+                  
+                  <div class="form-group whatsappFormRow">
+                    <div class="label" >Como ficou sabendo?</div>
+                    <select class="form-control" id="wa_select">
+                      <option hidden='hidden' selected='selected' value='default'>Opções (opcional)</option>
+                      <option value="Redes Sociais">Redes Sociais</option>
+                      <option value="Um Amigo">Amigo</option>
+                      <option value="Outros">Outros</option>
+                    </select>
+                  </div>
+
+                  <!--<div class="form-group whatsappFormRow">
+                    <div class="label">Qual sua idade?</div>
+
+
+                    <div class="datainput">
+                      <input class="form-control" id="wa_number" name="count" required="" type="number" value="">
+                      <span class="highlight"></span><span class="bar"></span>
+                      
+                    </div>
+                  </div>-->
+                  
+                  <div class="form-group whatsappFormRow">
+                    <div class="label" >URL/Link do seu perfil</div>
+                    <input class="form-control" id="wa_url" name="url" required="" type="url" placeholder="Facebook, Instagram... (opcional)" value=''/>
+                    <span class="highlight"></span><span class="bar"></span>
+                  </div>
+                  
+                  <div class="whatsappFormRow">
+                    <div class="label">Mensagem</div>
+                    <textarea class="whatsappForm-textarea"  rows="3" id='wa_textarea' placeholder='' row='1' required=""></textarea>
+                    <span class="highlight"></span><span class="bar"></span>
+                  </div>
+                  <div id="text-info"></div>
+
+
+                </form>
+
+              </div>
+              <div class="modal-footer ">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+                <button class="send_form whatsappFormRow btn btn-zap" href="javascript:void" type="submit" title="Enviar Mensagem" align="center"><span class="fab fa-whatsapp"></span> Enviar Mensagem</button>
+              </div>
+            </div>
+          </div>
+
+          <script src="assets/js/jquery.min.js"></script>
+          <script src="assets/js/sweetalert2.all.min.js"></script>
+          <script src="assets/js/jquery.validate.min.js"></script>
+          <script  src="assets/form/js/script.js"></script>
+          <script src="assets/js/bootstrap/bootstrap-4-latest.min.js"></script>
+          <script src="assets/js/script.js"></script>
+          <script  src="assets/jlplayer-master/video/jlplayer.js"></script>
+          <script src="assets/js/iconify.min.js"></script>
+
+
+        </body>
+
+        </html>
