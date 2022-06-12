@@ -729,7 +729,6 @@ textarea {
   height: 50px;
   width: 50px;
   min-width: 50px;
-  visibility: hidden;
 }
 
 .chat i {
@@ -758,6 +757,7 @@ textarea {
   width: 22px;
   height: 22px;
   line-height: 1;
+  visibility: hidden;
 
 }
 
@@ -850,45 +850,4 @@ textarea {
     text-decoration: none !important;
     background: var(--c-light) !important;
 
-}
-
-.btn-danger {
-    color: #fff;
-    background-color: #ff0000 !important;
-    border-color: #ff0000 !important;
-}
-
-.btn-danger:hover {
-    color: #fff;
-    background-color: #e50000 !important;
-    border-color: #e50000 !important;
-}
-
-.btn-danger.focus,
-.btn-danger:focus {
-    color: #fff;
-    background-color: #e50000 !important;
-    border-color: #e50000 !important;
-    box-shadow: 0 0 0 .2rem rgba(225, 83, 97, .5)
-}
-
-.btn-danger.disabled,
-.btn-danger:disabled {
-    color: #fff;
-    background-color: #ff0000 !important;
-    border-color: #ff0000 !important;
-}
-
-.btn-danger:not(:disabled):not(.disabled).active,
-.btn-danger:not(:disabled):not(.disabled):active,
-.show>.btn-danger.dropdown-toggle {
-    color: #fff;
-    background-color: #e50000 !important;
-    border-color: #e50000 !important;
-}
-
-.btn-danger:not(:disabled):not(.disabled).active:focus,
-.btn-danger:not(:disabled):not(.disabled):active:focus,
-.show>.btn-danger.dropdown-toggle:focus {
-    box-shadow: 0 0 0 .2rem rgba(225, 83, 97, .5)
 }
